@@ -12,6 +12,7 @@ function ndd_files() {
   wp_enqueue_script( 'ndd_navbar_scroll', get_theme_file_uri('/js/navbarScroll.js'), NULL, '1.0', true );
   wp_enqueue_script( 'ndd_navbar', get_theme_file_uri('/js/nav.js'), NULL, '1.0', true );
   wp_enqueue_script( 'ndd_accordion', get_theme_file_uri('/js/accordion.js'), NULL, '1.0', true );
+  wp_enqueue_script( 'ndd_accordion', get_theme_file_uri('/js/accordion.js'), NULL, '1.0', true );
 }
 
 add_action('wp_enqueue_scripts', 'ndd_files');
