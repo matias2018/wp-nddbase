@@ -9,10 +9,10 @@ function ndd_files() {
   wp_enqueue_style( 'ndd_nav_styles', get_theme_file_uri('/css/nav.css') );
   wp_enqueue_style( 'ndd_obra_styles', get_theme_file_uri('/css/obras.css') );
   wp_enqueue_style( 'font-awesome', get_theme_file_uri('//use.fontawesome.com/releases/v5.0.1/css/all.css') );
-  wp_enqueue_script( 'ndd_navbar_scroll', get_theme_file_uri('/js/navbarScroll.js'), NULL, '1.0', true );
+  /* wp_enqueue_script( 'ndd_navbar_scroll', get_theme_file_uri('/js/navbarScroll.js'), NULL, '1.0', true );
   wp_enqueue_script( 'ndd_navbar', get_theme_file_uri('/js/nav.js'), NULL, '1.0', true );
-  wp_enqueue_script( 'ndd_accordion', get_theme_file_uri('/js/accordion.js'), NULL, '1.0', true );
-  wp_enqueue_script( 'ndd_accordion', get_theme_file_uri('/js/accordion.js'), NULL, '1.0', true );
+  wp_enqueue_script( 'ndd_accordion', get_theme_file_uri('/js/accordion.js'), NULL, '1.0', true ); */
+  /* wp_enqueue_script( 'ndd_index', get_theme_file_uri('/src/index.js'), NULL, '1.0', true ); */
 }
 
 add_action('wp_enqueue_scripts', 'ndd_files');
