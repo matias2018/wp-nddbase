@@ -9,7 +9,7 @@ get_header();
     $faq = get_field('question');
     $answer = get_field('answer');
     ?>
-    <section class="single-faq features-head bg-light py-3">
+    <section id="main-content" class="single-faq features-head bg-light py-3 init">
       <div class="container">
         <div class="accordion">
           <button class="faq faq-1"><?php echo $faq ?>

@@ -2,24 +2,49 @@
 
 .navbar {
   position: relative;
-  z-index: 2;
-  background-color: var(--primary-color);
-  color: #fff;
+  z-index: 15;
+  background-color: var(--new-bright-color);
   height: 13rem;
-  transition: all .3s;
+  transition: all 0.3s;
+  padding: 20px 0;
 }
+
+
 .navbar.sticky {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  z-index: 2;
-  background-color: var(--primary-color);
+  width: 100%;
+  z-index: 15;
 }
 
-.logo-nav {
-  height: 50px;
+.custom-logo {
+  height: 135px;
+  padding: 20px 0 20px 0;
   transition: all .3s;
+}
+
+.navbar--logo .logo {
+  height: 100px;
+}
+
+@media screen and (max-width: 991px) {
+  .logo,
+  .custom-logo {
+    height: 135px;
+    padding: 20px 0 20px 0;
+  }
+}
+
+.custom-logo-link {
+  display: inline-block;
+  height: 50%;
+}
+
+.custom-logo-link .custom-logo {
+  display: block;
+  max-height: 50%;
+  width: auto;
 }
 
 .navbar ul {
@@ -27,7 +52,7 @@
 }
 
 .navbar a {
-  color: #fff;
+  color: #000;
 }
 
 .navbar .flex {
@@ -36,30 +61,52 @@
 
 .navbar li {
   margin-right: 1rem;
-  font-size: 1.8rem;
   font-weight: 500;
   color: #fee;
   transition: all .3s;
+}
+
+.nav-items {
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
 .navbar li:not(:last-child) {
   margin-right: 35px;
 }
 
-.navbar li::after {
+.navbar li:not(:last-child)::after,
+.navbar-footer-item::after {
   content: '';
   display: block;
   width: 0;
   height: 2px;
-  background: #fff;
-  transition: width .3s;
+  background-color: #000;
+  transition: all .3s;
 }
 
-.navbar li:hover {
+/* solving a bug with a span inside a p */
+span.knowMoreBtn {
+  position: relative;
+  transform: translateY(142px);
+}
+
+.blueNavbar li:not(:last-child)::after {
+  background: #fff;
+}
+
+.navbar li:hover,
+.navbar-footer-item:hover {
+  color: #000;
+}
+
+.blueNavbar li:hover {
   color: #fff;
 }
 
-.navbar li:hover::after {
+.knowMoreBtn:hover::after,
+.navbar li:hover::after,
+.navbar-footer-item:hover::after {
   width: 100%;
 }
 
@@ -68,11 +115,35 @@
   display: block;
   width: 100%;
   height: 2px;
+  background: #000;
+}
+
+.blueNavbar li.nav-item.active::after {
   background: #fff;
+}
+
+.blueNavbar {
+  background-color: var(--primary-color);
+}
+
+.blueNavbar a {
+  color: #fff;
 }
 
 /* mobile menu */
 @media(max-width: 1024px) {
+
+  .navbar {
+    height: 100px !important;
+  }
+
+  .navbar a {
+    color: #fff;
+  }
+  .navbar .flex {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
   .burger-menu {
     display: flex;
@@ -88,16 +159,20 @@
     width: 30px;
     height: 21px;
     transform: translate(-100%, 100%);
-    z-index: 10;
+    z-index: 20;
   }
 
   .burger-menu .bar {
     height: 3px;
     width: 100%;
-    background-color: #fff;
+    background-color: #000;
     border-radius: 10px;
     transition: all .3s;
     position: relative;
+  }
+  .opened .bar,
+  .blueNavbar .burger-menu .bar {
+    background-color: #fff;
   }
 
   .burger-menu.opened .bar:nth-child(1) {
@@ -208,7 +283,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    z-index: 2;
+    z-index: 15;
     transition: all 0.3s;
   }
   .navbar-desktop::before {
@@ -238,7 +313,6 @@
 
   .navbar .flex {
     flex-direction: column;
-    align-items: center;
     justify-content: center;
   }
 
@@ -274,6 +348,9 @@
 
 }
 
+.transparentArrow {
+  display: none;
+}
 
 /* test */
 /* * {

@@ -14,3 +14,26 @@ Date : 2021-10-06
 
 [Criar relações entre posts e.g. "Cience of Cats" e "Biology" e "Math":][link post_type_relations]
 [post_type_relations]: https://www.udemy.com/course/become-a-wordpress-developer-php-javascript/learn/lecture/7451310#notes
+
+## Installed Plugins
+
+ACF to REST API
+
+Custom Field SUite
+
+Custom Post Type UI
+
+FakerPress
+
+Pods - (maybe?)
+
+REST API Blocks
+
+WP GraphQL
+
+WP GraphQL Guttenberg
+
+WPGraphQL for Advanced Custom Fields
+
+
+

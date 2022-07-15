@@ -12,7 +12,7 @@ for(f = 0; f < faq.length; f++ ) {
     if (panel.classList.contains('show')) {
       rotator.classList.add('show');
     } else {
-      setTimeout(function(){ rotator.classList.remove('show'); }, 500);
+      rotator.classList.remove('show');
     }
   })
 }

@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 wp_footer();
 ?>
 
-  <footer class="footer">
+  <footer class="footer init">
     <div class="container">
       <div class="footer-logos footer-layer-top">
         <div class="footer-info">
@@ -22,8 +22,8 @@ wp_footer();
       </div>
 
       <div class="footer-info-telephone footer-layer-2">
-        <a class="font-dark" href="tel:+351 213 401 170">213 401 170</a>
-        <a class="font-dark" href="tel:+351 213 401 171">/ 171</a>
+        <a class="font-dark" href="tel:+351213401170">213 401 170</a>
+        <a class="font-dark" href="fax:+351213401171">/ 171</a>
       </div>
       
       <div class="footer-info-about footer-layer-3">
@@ -33,31 +33,31 @@ wp_footer();
           </div>
         </div>
         <div class="footer-right">
-          <nav class="navbar-footer">
+          <nav class="navbar-footer hide-on-mobile">
             <ul class="nav-items flex navbar-footer-items">
               <li class="navbar-footer-item"
-                <?php if(is_front_page()) echo 'class="nav-item active"'?>class="nav-item">
-                  <a href="<?= site_url(); ?>">Home</a>
+                <?php if(is_front_page())?>>
+                  <a href="<?= site_url(); ?>">Início</a>
                 </li>
               <li class="navbar-footer-item"
-                <?php if(is_page('sobre-nos')) echo 'class="nav-item active"'?> class="nav-item">
+                <?php if(is_page('sobre-nos')) ?>>
                   <a href="<?= site_url('/sobre-nos'); ?>">Sobre Nós</a>
                 </li>
               <li class="navbar-footer-item"
-                <?php if(is_page('candidaturas')) echo 'class="nav-item active"'?> class="nav-item">
+                <?php if(is_page('candidaturas')) ?>>
                 <a href="<?= site_url('/candidaturas'); ?>">Candidaturas</a>
               </li>
               <li class="navbar-footer-item"
-                <?php if(get_post_type() == 'obra') echo 'class="nav-item active"'?> class="nav-item">
+                <?php if(get_post_type() == 'obra') ?>>
                 <a href="<?= site_url('/obras'); ?>">Obras</a>
               </li>
               <li class="navbar-footer-item"
-                <?php if(get_post_type() == 'post') echo 'class="nav-item active"'?> class="nav-item">
+                <?php if(get_post_type() == 'post') ?>>
                 <a href="<?= site_url('/noticias'); ?>">Notícias</a>
               </li>
               <li class="navbar-footer-item" 
-                <?php if(is_page('contactos')) echo 'class="nav-item active"'?> class="nav-item">
-                <a href="<?= site_url('/contactos'); ?>">Contactos</a>
+                <?php if(is_page('contactos')) ?>>
+                <a href="<?= site_url('/info'); ?>">Informações</a>
               </li>
             </ul>
           </nav> 
@@ -75,10 +75,9 @@ wp_footer();
             <a class="font-dark" href="<?= site_url('/privacy-policy'); ?>">Politicas de Privacidade</a>
           </div>
           <div class="footer-info politics-2">
-            <a class="font-dark" href="<?= site_url('/privacy-policy'); ?>">Politicas de Cookies</a>
+            <a class="font-dark" href="<?= site_url('/politicas-de-cookies'); ?>">Politicas de Cookies</a>
           </div>
         </div>
-        
       </div>
 
     </div>

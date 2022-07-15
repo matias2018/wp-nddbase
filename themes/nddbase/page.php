@@ -7,10 +7,9 @@ get_header();
     the_post(); 
 ?>
 
-<section class="candidaturas features-head bg-light py-3">
+<section id="main-content" class="candidaturas features-head bg-light init">
     <div class="container">
       <div>
-        <h1 class="title"><?php the_title(); ?></h1>
         <div class="lead generic-content">
           <?php the_content(); ?>
         </div>

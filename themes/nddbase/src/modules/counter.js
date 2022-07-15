@@ -6,21 +6,29 @@ const options = {
   rootMargin: "-100px"
 };
 
-topPos = statsSection.offsetTop;
+/* if(statsSection) {
+  topPos = statsSection.offsetTop;
+} else {
+  return;
+} */
 
-const observer = new IntersectionObserver(function(entries, observer) {
-  entries.forEach(entry => {
-    /* console.log('entry', entry.isIntersecting) */
-    /* entry.target.classList.toggle('showing') */
-    if(entry.isIntersecting) {
-      count()
-    } else {
-      return
-    }
-  })
-}, options)
+topPos = statsSection ? statsSection.offsetTop : false;
 
-observer.observe(statsSection)
+if(topPos) {
+  const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      /* console.log('entry', entry.isIntersecting) */
+      /* entry.target.classList.toggle('showing') */
+      if(entry.isIntersecting) {
+        count()
+      } else {
+        return
+      }
+    })
+  }, options)
+  
+  observer.observe(statsSection)
+}
 
 
 function count() {

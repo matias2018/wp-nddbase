@@ -2,7 +2,7 @@
   get_header();
 ?>
 
-<section class="faqs features-head bg-light py-3">
+<section class="faqs features-head bg-light py-3 init">
     <div class="container">
       <div>
         <h1 class="title">FAQ's</h1>
@@ -10,7 +10,7 @@
     </div>
   </section>
 
-  <section class="posts-container features-head bg-light py-3">
+  <section id="main-content" class="posts-container features-head bg-light py-3">
     <div class="container faqs_container">
       <?php
         if ( have_posts() ) {
