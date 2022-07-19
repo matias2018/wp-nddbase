@@ -1,12 +1,13 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+if (!defined('ABSPATH')) {
+  exit; // Exit if accessed directly.
 }
 
-$menu = wp_get_nav_menu_items( 'Header' );
+$menu = wp_get_nav_menu_items('Header');
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+
 <head>
   <meta charset="<?php bloginfo('charset') ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,42 +37,41 @@ $menu = wp_get_nav_menu_items( 'Header' );
         <span class="sr-only">Menu</span>
       </a>
       <!-- mobile -->
-    <div class="container flex">
-      <div class="navbar--logo">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/real/logos/logo_black.svg" alt="<?php bloginfo('name'); ?>" class="logo">
-        </a>
-      </div> 
-      <nav class="navbar-desktop">
-        <ul class="nav-items">
-          <li <?php if(is_front_page()) echo 'class="nav-item active"'?>>
+      <div class="container flex">
+        <div class="navbar--logo">
+          <a href="<?php echo esc_url(home_url('/')); ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/real/logos/logo_black.svg" alt="<?php bloginfo('name'); ?>" class="logo">
+          </a>
+        </div>
+        <nav class="navbar-desktop">
+          <ul class="nav-items">
+            <li <?php if (is_front_page()) echo 'class="nav-item active"' ?>>
               <a href="<?= site_url(); ?>">Início</a>
             </li>
-          <li <?php if(is_page('sobre-nos')) echo 'class="nav-item active"'?>>
+            <li <?php if (is_page('sobre-nos')) echo 'class="nav-item active"' ?>>
               <a href="<?= site_url('/sobre-nos'); ?>">Sobre Nós</a>
             </li>
-          <li <?php if(is_page('candidaturas')) echo 'class="nav-item active"'?>>
-            <a href="<?= site_url('/candidaturas'); ?>">Candidaturas</a>
-          </li>
-          <li
-            <?php if(get_post_type() == 'obra') echo 'class="nav-item active"'?>>
-            <a href="<?= site_url('/obras'); ?>">Obras</a>
-          </li>
-          <li <?php if(get_post_type() == 'post') echo 'class="nav-item active"'?>>
-            <a href="<?= site_url('/noticias'); ?>">Notícias</a>
-          </li>
-          <li <?php if(is_page('info')) echo 'class="nav-item active"'?>>
-            <a href="<?= site_url('/info'); ?>">Informações</a>
-          </li>
-          <li class="nav-item">
-            <a href="<?= esc_url(site_url('/search')); ?>">
-              <i class="fas fa-search">
-                <span class="screen-reader-only">Search</span>
-              </i>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div><!-- /class="container flex" -->
+            <li <?php if (is_page('candidaturas')) echo 'class="nav-item active"' ?>>
+              <a href="<?= site_url('/candidaturas'); ?>">Candidaturas</a>
+            </li>
+            <li <?php if (get_post_type() == 'obra') echo 'class="nav-item active"' ?>>
+              <a href="<?= site_url('/obras'); ?>">Obras</a>
+            </li>
+            <li <?php if (get_post_type() == 'post') echo 'class="nav-item active"' ?>>
+              <a href="<?= site_url('/noticias'); ?>">Notícias</a>
+            </li>
+            <li <?php if (is_page('info')) echo 'class="nav-item active"' ?>>
+              <a href="<?= site_url('/info'); ?>">Informações</a>
+            </li>
+            <li class="nav-item">
+              <a href="<?= esc_url(site_url('/search')); ?>">
+                <i class="fas fa-search">
+                  <span class="screen-reader-only">Search</span>
+                </i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div><!-- /class="container flex" -->
     </div><!-- /class="navbar" -->
-</header>
+  </header>
